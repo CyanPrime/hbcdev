@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>HitBoxCreator Draw API Example | A Small Javascript API</title>
+
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script type="text/javascript" src="build/hbcd.js"></script>
+		<script type="text/javascript">
+			var characterImg = new Image();
+			characterImg.src = "sprite.png";
+			var resZoom = 2;
+				
+			var xml = "\<frame\> \<img\>sprite.png\<\/img\>\<cx\>0\<\/cx\>\<cy\>0\<\/cy\>\<numhitboxes\>2\<\/numhitboxes\>\<hitboxes\>\<hitbox\>\<hx\>0\<\/hx\>\<hy\>0\<\/hy\>\<hw\>16\<\/hw\>\<hh\>32\<\/hh\>\<ht\>2\<\/ht\>\<\/hitbox\>\<hitbox\>\<hx\>16\<\/hx\>\<hy\>0\<\/hy\>\<hw\>16\<\/hw\>\<hh\>32\<\/hh\>\<ht\>3\<\/ht\>\<\/hitbox\>\<\/hitboxes\>\<\/frame\>";
+
+			var frame =  getFrameFromXML(xml);
+
+			function draw(){
+				var ctx = $('#canvas')[0].getContext("2d"); //get context of canvas
+				ctx.mozImageSmoothingEnabled = false;
+				ctx.setTransform(resZoom, 0, 0, resZoom, 0, 0);
+
+				ctx.fillStyle = "#000000";
+				ctx.fillRect(0,0,640, 480);
+
+				drawFrame(ctx, true, characterImg, frame, 50, 50, resZoom, true);
+
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="canvas" width="640" height="480"></canvas>
+
+		<div id="clickme" onclick="draw();">[Click to draw.]</div>
+	</body>
+</html>
