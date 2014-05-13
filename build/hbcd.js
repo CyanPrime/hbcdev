@@ -41,6 +41,11 @@ function drawFrame(ctx, charImgLoaded, characterImg, frame, x, y, zoom, drawHitb
 	}
 }
 
+function addEscapeSlashes(xml){
+	var str = xml.replace("<", "\<").replace(">", "\>").replace("/", "\/");
+	return str;
+}
+
 function getFrameFromXML(xml){
 	var tempFrame = new Frame();
 	console.log("xml printing");

@@ -34,4 +34,6 @@ The `drawFrame(ctx, charImgLoaded, characterImg, frame, x, y, zoom, drawHitboxes
 `zoom` is the amount your canvas is being upscaled. Put the value at 1 if you're not upscaling, or to 2 if you're scale is x2.<br/>
 `drawHitboxes` is a boolean value that if true will allow the function to draw the hitbox data as well as the image.<br/>
 
-the `getFrameFromXML(xml)` function takes a string argument of XML data, and creates a Frame object that is returned by the function.
+the `getFrameFromXML(xml)` function takes a string argument of XML data, and creates a Frame object that is returned by the function.<br/>
+
+the `addEscapeSlashes(xml)` function takes a string argument of XML data, and returns a string of xmlData formatted to be used with `getFrameFromXML(xml)`. For example `/` becomes `\/`.

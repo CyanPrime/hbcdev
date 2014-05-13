@@ -11,10 +11,31 @@
 			var characterImg = new Image();
 			characterImg.src = "sprite.png";
 			var resZoom = 2;
-				
-			var xml = "\<frame\> \<img\>sprite.png\<\/img\>\<cx\>0\<\/cx\>\<cy\>0\<\/cy\>\<numhitboxes\>2\<\/numhitboxes\>\<hitboxes\>\<hitbox\>\<hx\>0\<\/hx\>\<hy\>0\<\/hy\>\<hw\>16\<\/hw\>\<hh\>32\<\/hh\>\<ht\>2\<\/ht\>\<\/hitbox\>\<hitbox\>\<hx\>16\<\/hx\>\<hy\>0\<\/hy\>\<hw\>16\<\/hw\>\<hh\>32\<\/hh\>\<ht\>3\<\/ht\>\<\/hitbox\>\<\/hitboxes\>\<\/frame\>";
+			
+			var xml = "<frame>" +
+					"<img>link-0-0.png</img>" +
+					"<cx>-8</cx>" +
+					"<cy>-32</cy>" +
+					"<numhitboxes>2</numhitboxes>" +
+					"<hitboxes>" +
+						"<hitbox>" +
+							"<hx>-8</hx>" +
+							"<hy>-32</hy>" +
+							"<hw>16</hw>" +
+							"<hh>16</hh>" +
+							"<ht>0</ht>" +
+						"</hitbox>" +
+						"<hitbox>" +
+							"<hx>-8</hx>" +
+							"<hy>-16</hy>" +
+							"<hw>16</hw>" +
+							"<hh>16</hh>" +
+							"<ht>1</ht>" +
+						"</hitbox>" +
+					"</hitboxes>" +
+				"</frame>";
 
-			var frame =  getFrameFromXML(xml);
+			var frame =  getFrameFromXML(addEscapeSlashes(xml));
 
 			function draw(){
 				var ctx = $('#canvas')[0].getContext("2d"); //get context of canvas
