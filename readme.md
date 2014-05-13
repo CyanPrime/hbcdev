@@ -27,11 +27,11 @@ Functions
 =========
 The `drawFrame(ctx, charImgLoaded, characterImg, frame, x, y, zoom, drawHitboxes)` is used to draw a `Frame` onto the canvas. The Function has 8 variables that need to be passed, but they're pretty simple.
 `ctx` is the context of the canvas.
-`charImageLoaded` is a boolean value used to see if the image you`re sending drawFrame is loaded. If this is false the function won`t do anything.
+`charImageLoaded` is a boolean value used to see if the image you're sending drawFrame is loaded. If this is false the function won't do anything.
 `characterImg` is the image you want to be drawn onto the canvas.
 `x` is the `x` value of the object to be drawn. the algorithem to draw is `(x + frame.charPos[0]);`.
 `y` is the `y` value of the object to be drawn. the algorithem to draw is `(y + frame.charPos[1]);`.
-`zoom` is the amount your canvas is being upscaled. Put the value at 1 if you`re not upscaling, or to 2 if you`re scale is x2.
+`zoom` is the amount your canvas is being upscaled. Put the value at 1 if you`'re not upscaling, or to 2 if you`re scale is x2.
 `drawHitboxes` is a boolean value that if true will allow the function to draw the hitbox data as well as the image.
 
 the `getFrameFromXML(xml)` function takes a string argument of XML data, and creates a Frame object that is returned by the function.
