@@ -25,7 +25,7 @@ The `charPos` is a Array. `charPos[0]` is the `x` value of the frame, and `charP
 
 Functions
 =========
-The `drawFrame(ctx, charImgLoaded, characterImg, frame, x, y, zoom, drawHitboxes)` is used to draw a `Frame` onto the canvas. The Function has 8 variables that need to be passed, but they`re pretty simple.
+The `drawFrame(ctx, charImgLoaded, characterImg, frame, x, y, zoom, drawHitboxes)` is used to draw a `Frame` onto the canvas. The Function has 8 variables that need to be passed, but they're pretty simple.
 `ctx` is the context of the canvas.
 `charImageLoaded` is a boolean value used to see if the image you`re sending drawFrame is loaded. If this is false the function won`t do anything.
 `characterImg` is the image you want to be drawn onto the canvas.
